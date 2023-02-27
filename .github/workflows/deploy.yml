@@ -34,3 +34,5 @@ jobs:
             pip3 install awscli
             cd count_to_table && zip -r package.zip ./*
             aws lambda update-function-code --function-name count_to_table --zip-file fileb://package.zip --publish
+            cd wheel_counter && zip -r package.zip ./*
+            aws lambda update-function-code --function-name Wheel_Counter --zip-file fileb://package.zip --publish
