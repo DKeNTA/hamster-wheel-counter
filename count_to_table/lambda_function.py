@@ -5,7 +5,7 @@ import datetime
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('counter-table')
 
-def lambda_handler(event):
+def lambda_handler(event, context):
     #print(json.dumps(event))
     posted_param = json.loads(event['body'])
     
