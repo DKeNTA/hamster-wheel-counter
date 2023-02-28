@@ -1,1 +1,1 @@
-# hamster-wheel-counter
+# hamster wheel counter
