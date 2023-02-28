@@ -32,7 +32,7 @@ jobs:
       - name: lambda update
         run: |
             pip3 install awscli
-            cd count_to_table && zip -r package_count_to_table.zip ./*
+            zip -r package_count_to_table.zip ./count_to_table/*
             aws lambda update-function-code --function-name count_to_table --zip-file fileb://package_count_to_table.zip --publish
-            cd ../wheel_counter && zip -r package_wheel_counter.zip ./*
+            zip -r package_wheel_counter.zip ./wheel_counter/*
             aws lambda update-function-code --function-name Wheel_Counter --zip-file fileb://package_wheel_counter.zip --publish
